@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32104.313
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Console", "Calculator\Calculator.Console.csproj", "{F0E15BC1-0C28-444C-9BD5-A87C3C2E76E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Console", "Calculator.Console\Calculator.Console.csproj", "{F0E15BC1-0C28-444C-9BD5-A87C3C2E76E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Engine", "Engine\Calculator.Engine.csproj", "{C182084F-5233-4497-A3FE-26921A8D9BE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Engine", "Calculator.Engine\Calculator.Engine.csproj", "{C182084F-5233-4497-A3FE-26921A8D9BE9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Engine.Tests", "Calculator.Engine.Tests\Calculator.Engine.Tests.csproj", "{DBF04207-E52D-479F-8E1A-137319345365}"
 EndProject
