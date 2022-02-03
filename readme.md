@@ -8,7 +8,9 @@ This is a simple console application to evaluate Math expressions.
 
 This application can be executed in Visual Studio by pressing F5. 
 
-Enter the Math expression and press enter to execute. The numbers and operators must be separated by `space`.
+Type the Math expression and press `enter` to execute. The numbers and operators must be separated by `space`.
+
+Type 'exit' to quit.
 
 ## Examples
 
@@ -28,3 +30,4 @@ Enter the Math expression and press enter to execute. The numbers and operators 
 
 ### Nested brackets
 - 10 - ( 2 + 3 * ( 7 - 5 ) ) 
+- ( ( ( 9 - 6 / 2 ) * 2 - 4 ) / 2 - 6 - 1 ) / ( 2 + 24 / ( 2 + 4 ) )
