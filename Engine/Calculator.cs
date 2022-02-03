@@ -55,8 +55,6 @@
 
             var openBrackets = 0;
             var bracketTokens = new List<string>();
-            var openBracketIndex = tokens.IndexOf("(");
-            var closeBracketIndex = 0;
             for (int i = 0; i < tokens.Count; i++)
             {
                 var token = tokens[i];
@@ -72,18 +70,21 @@
 
                 if (bracketTokens.Any() && openBrackets == 0)
                 {
-                    closeBracketIndex = i;
-                    break;
+                    var openBracketIndex = tokens.IndexOf("(");
+                    var closeBracketIndex = i;
+
+                    IList<string> solvedTokens = Solve(bracketTokens);
+
+                    for (int j = openBracketIndex; j <= closeBracketIndex; j++)
+                        tokens.RemoveAt(openBracketIndex);
+
+                    for (int j = 0; j < solvedTokens.Count; j++)
+                        tokens.Insert(openBracketIndex, solvedTokens[j]);
+
+                    i = 0;
+                    bracketTokens.Clear();
                 }
             }
-
-            IList<string> solvedTokens = Solve(bracketTokens);
-
-            for (int i = openBracketIndex; i <= closeBracketIndex; i++)
-                tokens.RemoveAt(openBracketIndex);
-
-            for (int i = 0; i < solvedTokens.Count; i++)
-                tokens.Insert(openBracketIndex, solvedTokens[i]);
 
             return tokens;
         }

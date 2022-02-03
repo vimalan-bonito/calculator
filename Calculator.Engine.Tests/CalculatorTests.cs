@@ -128,6 +128,17 @@ namespace Calculator.Engine.Tests
         }
 
         [Theory, CalculatorAutoData]
+        public void Calculate_WhenMultipleDifferentOperationsWithMultipleBrackets_ShouldReturnCorrectResult(
+            Calculator sut)
+        {
+            var expression = "( 1 / 2 ) - ( 1 + 1 )";
+
+            var result = sut.Calculate(expression);
+
+            result.Should().Be("-1.5");
+        }
+
+        [Theory, CalculatorAutoData]
         public void Calculate_WhenMultipleDifferentOperationsWithNestedBrackets_ShouldReturnCorrectResult(
             Calculator sut)
         {
@@ -136,6 +147,17 @@ namespace Calculator.Engine.Tests
             var result = sut.Calculate(expression);
 
             result.Should().Be("2");
+        }
+
+        [Theory, CalculatorAutoData]
+        public void Calculate_WhenMultipleDifferentOperationsWithMultipleNestedAndNonNestedBrackets_ShouldReturnCorrectResult(
+            Calculator sut)
+        {
+            var expression = "( ( ( 9 - 6 / 2 ) * 2 - 4 ) / 2 - 6 - 1 ) / ( 2 + 24 / ( 2 + 4 ) )";
+
+            var result = sut.Calculate(expression);
+
+            result.Should().Be("-0.5");
         }
 
         [Theory, CalculatorAutoData]
